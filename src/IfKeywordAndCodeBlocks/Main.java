@@ -3,10 +3,12 @@ package IfKeywordAndCodeBlocks;
 public class Main {
     public static void main(String[] args) {
 
-        calculateScore(true, 800, 5, 100);
+        int highScore = calculateScore(true, 800, 5, 100);
+        System.out.println("Final score: " + highScore);
 
         //Challenge
-        calculateScore(true, 10000, 8, 200);
+        highScore = calculateScore(true, 10000, 8, 200);
+        System.out.println("Final score: " + highScore);
     }
 
     public static int calculateScore(boolean gameOver, int score, int levelCompleted, int bonus) {
@@ -14,7 +16,6 @@ public class Main {
         if (gameOver) {
             int finalScore = score + (levelCompleted * bonus);
             finalScore += 1000;
-            System.out.println("finals score:" + finalScore);
             return finalScore;
         }
         return -1;
